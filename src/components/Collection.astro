@@ -1,0 +1,65 @@
+---
+const arktifacts = [
+	{ id: 1, name: "Ancient Cyber Relic", image: "/arktifact-1.jpg" },
+	{ id: 2, name: "Digital Pharaoh's Mask", image: "/arktifact-2.jpg" },
+	{ id: 3, name: "Quantum Stone Tablet", image: "/arktifact-3.jpg" },
+	{ id: 4, name: "Neon Hieroglyph Scroll", image: "/arktifact-4.jpg" },
+];
+---
+<section id="collection" class="collection">
+	<div class="container">
+		<h2>ARKtifacts Collection</h2>
+		<div class="grid">
+			{arktifacts.map((item) => (
+				<div class="arktifact-card">
+					<img src={item.image} alt={item.name} />
+					<h3>{item.name}</h3>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.collection {
+		background-color: #13151a;
+		padding: 4rem 0;
+	}
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+	h2 {
+		color: #eb5e41;
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+	.arktifact-card {
+		background-color: #1c1e24;
+		border-radius: 10px;
+		overflow: hidden;
+		transition: transform 0.3s ease;
+	}
+	.arktifact-card:hover {
+		transform: translateY(-5px);
+	}
+	.arktifact-card img {
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+	}
+	.arktifact-card h3 {
+		color: white;
+		font-size: 1.2rem;
+		padding: 1rem;
+		margin: 0;
+		text-align: center;
+	}
+</style>

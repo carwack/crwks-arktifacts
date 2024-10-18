@@ -1,0 +1,133 @@
+---
+---
+<section id="home" class="hero">
+	<div class="hero-content">
+		<div class="logo">
+			<span class="dot"></span>
+			<h1>CRWK's ARKtifacts</h1>
+		</div>
+		<div class="hero-main">
+			<div class="hero-text">
+				<p>A Treasure</p>
+				<p>Trove</p>
+				<p>Of Ark UI</p>
+        <p>Code Snippets</p>
+        <h3>and other front-end stuff.</h3>
+			</div>
+			<div class="hero-images">
+				<img src="/code-snippet.png" alt="Code Snippet" class="code-snippet">
+				<img src="/ui-component.png" alt="UI Component" class="ui-component">
+			</div>
+		</div>
+		<a href="#featured-posts" class="cta-button">EXPLORE THE COLLECTION</a>
+	</div>
+</section>
+
+<style>
+	.hero {
+		background: linear-gradient(135deg, #1e0b0b 0%, #1a0909 50%, #0d0505 100%);
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		padding: 2rem;
+	}
+	.hero-content {
+		max-width: 1200px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.logo {
+		display: flex;
+		align-items: center;
+		margin-bottom: 4rem;
+		align-self: flex-start;
+	}
+	.dot {
+		width: 20px;
+		height: 20px;
+		background-color: #eb5e41;
+		border-radius: 50%;
+		margin-right: 1rem;
+	}
+	h1 {
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: #ef8d78;
+	}
+	.hero-main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 4rem;
+	}
+	.hero-text {
+		text-align: left;
+		margin-right: 4rem;
+	}
+	.hero-text p {
+		font-size: 5rem;
+		font-weight: 700;
+		line-height: 1.2;
+		margin: 0;
+		letter-spacing: -0.05em;
+	}
+	.hero-images {
+		position: relative;
+		width: 40%;
+		display: flex;
+		justify-content: center;
+	}
+	.code-snippet, .ui-component {
+		width: 100%;
+		max-width: 400px;
+		height: auto;
+	}
+	.ui-component {
+		position: absolute;
+		top: 50%;
+		right: -20%;
+		transform: translateY(-50%);
+		width: 50%;
+		max-width: 250px;
+	}
+	.cta-button {
+		background-color: #eb5e41;
+		color: white;
+		padding: 0.8rem 1.5rem;
+		border-radius: 9999px;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 0.9rem;
+		transition: background-color 0.3s ease;
+		display: inline-block;
+	}
+	.cta-button:hover {
+		background-color: #ef8d78;
+	}
+
+	@media (max-width: 768px) {
+		.hero-main {
+			flex-direction: column;
+			align-items: center;
+		}
+		.hero-text {
+			margin-right: 0;
+			margin-bottom: 2rem;
+		}
+		.hero-text h2 {
+			font-size: 3rem;
+		}
+		.hero-images {
+			width: 80%;
+		}
+		.ui-component {
+			right: -10%;
+			width: 40%;
+		}
+	}
+</style>

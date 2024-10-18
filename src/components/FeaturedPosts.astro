@@ -1,0 +1,105 @@
+---
+const featuredPosts = [
+	{
+		id: 1,
+		title: "Building a Responsive Navbar with Ark UI",
+		description: "Learn how to create a fully responsive navigation bar using Ark UI components.",
+		image: "/post-1.jpg"
+	},
+	{
+		id: 2,
+		title: "Mastering Form Validation in React",
+		description: "Explore advanced techniques for form validation in React applications.",
+		image: "/post-2.jpg"
+	},
+	{
+		id: 3,
+		title: "Optimizing Performance with Lazy Loading",
+		description: "Discover how to implement lazy loading to improve your website's performance.",
+		image: "/post-3.jpg"
+	},
+	{
+		id: 4,
+		title: "Creating Accessible Modals with Ark UI",
+		description: "Learn best practices for building accessible modal dialogs using Ark UI.",
+		image: "/post-4.jpg"
+	},
+];
+---
+<section id="featured-posts" class="featured-posts">
+	<div class="container">
+		<h2>Featured ARKtifacts</h2>
+		<div class="grid">
+			{featuredPosts.map((post) => (
+				<div class="post-card">
+					<img src={post.image} alt={post.title} />
+					<h3>{post.title}</h3>
+					<p>{post.description}</p>
+					<a href={`/post/${post.id}`} class="read-more">Read More</a>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.featured-posts {
+		background-color: #13151a;
+		padding: 4rem 0;
+	}
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+	h2 {
+		color: #eb5e41;
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+	.post-card {
+		background-color: #1c1e24;
+		border-radius: 10px;
+		overflow: hidden;
+		transition: transform 0.3s ease;
+	}
+	.post-card:hover {
+		transform: translateY(-5px);
+	}
+	.post-card img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+	.post-card h3 {
+		color: white;
+		font-size: 1.2rem;
+		padding: 1rem;
+		margin: 0;
+	}
+	.post-card p {
+		color: #a0a0a0;
+		font-size: 0.9rem;
+		padding: 0 1rem 1rem;
+	}
+	.read-more {
+		display: inline-block;
+		background-color: #eb5e41;
+		color: white;
+		text-decoration: none;
+		padding: 0.5rem 1rem;
+		border-radius: 5px;
+		margin: 0 1rem 1rem;
+		font-size: 0.9rem;
+		transition: background-color 0.3s ease;
+	}
+	.read-more:hover {
+		background-color: #ef8d78;
+	}
+</style>
